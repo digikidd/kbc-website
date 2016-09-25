@@ -1,0 +1,182 @@
+$bkgndcolor: #0F456D;
+$bkgndcolorlight: #061928;
+$txtcolor: #e2f0fb;
+$footercolor: #18232E;
+
+$mq-breakpoints: (
+        iphone  : 320px,
+        iphone6 : 375px,
+        iphone6p: 414px,
+        small   : 480px,
+        medium  : 640px,
+        ipad    : 768px,
+        large   : 1024px,
+        desktop : 1200px,
+);
+
+@mixin navCollapseTopMargin {
+  @include mq(iphone) {
+    margin-top: 4px!important;
+  }
+  @include mq(ipad) {
+    -webkit-transition: all 0.5s;
+    margin-top: 4px!important;
+  }
+  @include mq(medium) {
+    margin-top: 4px!important;
+  }
+  @include mq(large) {
+    margin-top: 4px!important;
+  }
+}
+
+@mixin kbcHeadingResize {
+  @include mq(iphone) {
+    font-size: 16px;
+  }
+  @include mq(smaller) {
+    font-size: 18px;
+  }
+  @include mq(small) {
+    font-size: 18px;
+  }
+  @include mq(ipad) {
+    font-size: 28px;
+  }
+  @include mq(large) {
+    font-size: 28px;
+  }
+}
+
+@mixin kbcHeading2Resize {
+  @include mq(iphone) {
+    font-size: 12px;
+  }
+  @include mq(smaller) {
+    font-size: 15px;
+  }
+  @include mq(small) {
+    font-size: 18px;
+  }
+  @include mq(ipad) {
+    font-size: 28px;
+  }
+  @include mq(large) {
+    font-size: 28px;
+  }
+}
+
+@mixin introTextResize {
+  @include mq(iphone) {
+    color: $txtcolor;
+    font-size: 28px;
+  }
+  @include mq(smaller) {
+    color: $txtcolor;
+    font-size: 28px;
+  }
+  @include mq(small) {
+    color: $txtcolor;
+    font-size: 54px;
+  }
+  @include mq(ipad) {
+    color: $txtcolor;
+    font-size: 54px;
+  }
+  @include mq(large) {
+    color: $txtcolor;
+    font-size: 72px;
+  }
+}
+
+@mixin aboutMeTextResize {
+  @include mq(iphone) {
+    font-size: 14px;
+  }
+  @include mq(smaller) {
+    font-size: 16px;
+  }
+  @include mq(small) {
+    font-size: 16px;
+  }
+  @include mq(medium) {
+    font-size: 18px;
+  }
+  @include mq(ipad) {
+    font-size: 20px;
+  }
+  @include mq(large) {
+    font-size: 24px;
+  }
+}
+
+@mixin mastHeadResize {
+  @include mq(iphone) {
+    margin-top: -14px;
+    height: 200px;
+    background-image: url("../images/kbc-fam-selfie-350.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  @include mq(small) {
+    height: 260px;
+    background-image: url("../images/kbc-fam-selfie-375.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  @include mq(medium) {
+    height: 350px;
+    background-image: url("../images/kbc-fam-selfie-640.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  @include mq(ipad) {
+    height: 450px;
+    background-image: url("../images/kbc-fam-selfie-768.png");
+    font-size: 68px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  @include mq(large) {
+    height: 575px;
+    background-image: url("../images/kbc-fam-selfie-1024.png");
+    background-size: cover;
+    margin:0;
+    background-repeat: no-repeat;
+  }
+  @include mq(desktop) {
+    height: 575px;
+    background-image: url("../images/kbc-fam-selfie-1024.png");
+    background-size: cover;
+    margin:0;
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin lg-text {
+  font: {
+    family: 'Josefin Sans', sans-serif;
+    size: 20px;
+    weight: bold;
+  }
+  color: #e2f0fb;
+}
+
+@mixin med-text {
+  font: {
+    family: 'Josefin Sans', sans-serif;
+    size: 16px;
+    weight: bold;
+  }
+  color: #e2f0fb;
+}
+@mixin sm-text {
+  font: {
+    family: 'Josefin Sans', sans-serif;
+    size: 12px;
+    weight: bold;
+  }
+  color: #e2f0fb;
+}
+
+
