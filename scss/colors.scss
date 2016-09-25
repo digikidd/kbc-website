@@ -145,7 +145,7 @@ $mq-breakpoints: (
     background-repeat: no-repeat;
   }
   @include mq(desktop) {
-    height: 575px;
+    height: 700px;
     background-image: url("../images/kbc-fam-selfie-1024.png");
     background-size: cover;
     margin:0;

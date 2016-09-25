@@ -228,7 +228,7 @@ li.navContact a:hover {
         background-repeat: no-repeat; } }
     @media only screen and (min-width: 1200px) {
       .aboutMe .masthead {
-        height: 575px;
+        height: 700px;
         background-image: url("../images/kbc-fam-selfie-1024.png");
         background-size: cover;
         margin: 0;
@@ -404,19 +404,28 @@ li.navContact a:hover {
 .contact {
   margin: 0 auto;
   width: 100%;
-  height: 730px;
+  height: 900px;
   background-color: #30404c; }
   .contact .banding {
     background: url("../images/code-background.png");
-    margin-top: 255px;
+    margin-top: 470px;
     background-size: cover;
-    height: 175px;
-    width: 100%; }
+    height: 175px; }
+  .contact .wrap {
+    width: 50%;
+    margin: 0 auto;
+    padding-left: 60px;
+    height: 80px; }
+    .contact .wrap .iconWrapper {
+      padding-top: 6px;
+      margin: 0 auto;
+      width: 15%;
+      text-align: center; }
 
 .contactMe {
   margin: 0 auto;
   padding-top: 12em;
-  width: 100%; }
+  width: 50%; }
   .contactMe h1 {
     text-align: center;
     margin: 0 auto;
@@ -433,14 +442,7 @@ li.navContact a:hover {
   .contactMe strong {
     color: #15619a; }
 
-.iconWrapper {
-  padding-top: 6px;
-  margin: 0 auto;
-  text-align: center;
-  border: 1px solid #CB2027; }
-
 .contactIcons {
-  border: 1px solid #CB2027;
   margin: auto;
   width: 65px;
   -webkit-filter: grayscale(100%); }
@@ -457,10 +459,6 @@ li.navContact a:hover {
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out; }
-
-.contactkbc {
-  margin: 0 auto;
-  width: 80%; }
 
 .submitProject {
   height: 900px;

@@ -28,17 +28,19 @@ class MySkills extends React.Component {
                     <div className="skill">
                         <div className="table-responsive">
                             <table className="table table-condensed">
+                                <tbody>
                                 {this.skills.map ((item, index)=> {
                                     var stars = Array (item.stars).fill ().map ((secondItem, secondIndex) => {
                                         return (<img key={secondIndex} src="../../images/goldstar.png"/>)
                                     });
                                         return (
-                                                <tr>
+                                                <tr key={index}>
                                                 <td className="skill-names col-md-6 xs-6">{item.name}</td>
                                                 <td className="skill-stars col-md-6 xs-6">{stars}</td>
                                                 </tr>
                                         )
                                 })}
+                                </tbody>
                             </table>
                         </div>
                     </div>
