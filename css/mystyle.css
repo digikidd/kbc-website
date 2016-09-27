@@ -424,8 +424,7 @@ li.navContact a:hover {
 
 .contactMe {
   margin: 0 auto;
-  padding-top: 12em;
-  width: 50%; }
+  padding-top: 12em; }
   .contactMe h1 {
     text-align: center;
     margin: 0 auto;
@@ -435,9 +434,15 @@ li.navContact a:hover {
     font-size: 62px; }
     @media only screen and (min-width: 320px) {
       .contactMe h1 {
+        width: 100%;
         font-size: 28px; } }
+    @media only screen and (min-width: 640px) {
+      .contactMe h1 {
+        width: 100%;
+        font-size: 52px; } }
     @media only screen and (min-width: 1024px) {
       .contactMe h1 {
+        width: 100%;
         font-size: 62px; } }
   .contactMe strong {
     color: #15619a; }

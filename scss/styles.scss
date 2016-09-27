@@ -345,7 +345,7 @@ li.navContact a:hover {
 .contactMe {
   margin: 0 auto;
   padding-top: 12em;
-  width: 50%;
+  //width: 50%;
   h1 {
     text-align: center;
     margin: 0 auto;
@@ -354,9 +354,15 @@ li.navContact a:hover {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 62px;
     @include mq(iphone){
+	  width:100%;
       font-size: 28px;
     }
+	@include mq(medium){
+	  width: 100%;
+	  font-size: 52px;
+	}
     @include mq(large){
+	  width: 100%;
       font-size: 62px;
     }
   }
