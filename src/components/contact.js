@@ -14,8 +14,8 @@ class Contact extends React.Component {
 
     render () {
         return (
-            <div className="contact">
-                <Element name="contact" className="mycontact">
+            <div className="">
+                <Element name="contact" className="contact">
                     <div className="contactMe">
                         <h1>would <strong>you</strong> like to <strong>work</strong> together?</h1>
                     </div>

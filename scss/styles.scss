@@ -244,7 +244,10 @@ li.navContact a:hover {
   background-color: #15619a;
   color: $txtcolor;
   @include mq(iphone) {
-	height: 880px;
+	height: 700px;
+  }
+  @include mq(iphone6) {
+    height: 700px;
   }
   @include mq(small) {
 	height: 880px;
@@ -346,47 +349,34 @@ li.navContact a:hover {
 .contact {
   margin: 0 auto;
   width: 100%;
+  height:2400px;
   @include mq(iphone){
 	height: 520px;
   }
-  @include mq(375, 667){
-	height: 700px;
+  @include mq(iphone6){
+	height: 618px;
   }
-  @include mq(iphone6p){
-	height: 725px;
-  }
-  @include mq(360, 640) {
-	height: 595px;
-  }
+
   @include mq(ipad){
 	height: 975px;
   }
   @include mq(desktop){
-	height: 900px;
+	height: 1500px;
   }
   background-color: #30404c;
   .banding {
     background: url("../images/code-background.png");
 	opacity: 0.6;
-    //margin-top:285px;
     background-size: cover;
-    height: 275px;
 	@include mq(iphone) {
 	  margin-top:80px;
 	  height: 110px;
 	}
-	@include mq(iphone6p) {
-	  margin-top:236px;
+	@include mq(iphone6) {
+	  margin-top:174px;
 	  height: 150px;
 	}
-	@include mq(360, 640) {
-	  margin-top:160px;
-	  height: 140px;
-	}
-	@include mq(small) {
-	  margin-top:165px;
-	  height: 150px;
-	}
+
 	@include mq(ipad) {
 	  margin-top:450px;
 	  height: 200px;
