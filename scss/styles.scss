@@ -15,13 +15,19 @@ body {
 }
 
 .navbar-collapse {
-  background-color: rgba(15, 69, 109, 1);
+  background-color: rgba(0, 11, 21, 0.1);
   margin-top: -1px;
   @include mq(iphone) {
     margin-top: -1px;
+	background-color: rgba(0, 11, 21, 0.3);
+  }
+  @include mq(ipad) {
+	margin-top: -1px;
+	background-color: rgba(0, 11, 21, 0.1);
   }
   @include mq(large) {
     margin-top: -1px;
+	background-color: rgba(0, 11, 21, 0.1);
   }
 }
 
@@ -29,7 +35,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: rgba(15, 69, 109, 1);
+  background-color: rgba(0, 0, 0, 0.2);
   height: 120px;
   line-height: 120px;
   -webkit-transition: height .5s, line-height .5s;
@@ -144,22 +150,25 @@ li.navContact a:hover {
   margin-bottom: -20px;
   background-color: #0f6d37;
   @include mq(iphone) {
-    height: 1200px;
+    height: 1300px;
   }
   @include mq(iphone6) {
-    height: 1325px;
+    height: 1275px;
   }
   @include mq(small) {
-    height: 1380px;
+    height: 1275px;
   }
   @include mq(medium) {
-    height: 1380px;
+    height: 1325px;
   }
   @include mq(ipad) {
-    height: 1490px;
+    height: 1390px;
   }
   @include mq(large) {
-    height: 1700px;
+    height: 1600px;
+  }
+  @include mq(desktop) {
+	height: 1800px;
   }
   .masthead {
     height: 600px;
@@ -197,7 +206,7 @@ li.navContact a:hover {
   .cabo {
     display: block;
     margin: 0 auto;
-    height: 200px;
+    height: 0;
     border-radius: 15px 50px;
     -webkit-filter: grayscale(100%);
     -webkit-transition: .5s ease-in-out;
@@ -205,14 +214,17 @@ li.navContact a:hover {
     -o-transition: .5s ease-in-out;
     padding: 18px;
     @include mq(iphone6) {
-      height: 100px;
+      height: 0;
     }
     @include mq(small) {
-      height: 125px;
+      height: 0;
     }
     @include mq(medium) {
-      height: 150px;
+      height: 0;
     }
+	@include mq(ipad) {
+	  height: 150px;
+	}
     @include mq(large) {
       height: 180px;
     }
@@ -231,6 +243,21 @@ li.navContact a:hover {
   font-family: 'Josefin Sans', sans-serif;
   background-color: #15619a;
   color: $txtcolor;
+  @include mq(iphone) {
+	height: 880px;
+  }
+  @include mq(small) {
+	height: 880px;
+  }
+  @include mq(ipad) {
+	height: 972px;
+  }
+  @include mq(large) {
+	height: 925px;
+  }
+  @include mq(desktop) {
+	height: 940px;
+  }
   h1 {
     font-size: 46px;
     text-align: center;
@@ -319,33 +346,71 @@ li.navContact a:hover {
 .contact {
   margin: 0 auto;
   width: 100%;
-  height: 900px;
+  @include mq(iphone){
+	height: 520px;
+  }
+  @include mq(375, 667){
+	height: 700px;
+  }
+  @include mq(iphone6p){
+	height: 725px;
+  }
+  @include mq(360, 640) {
+	height: 595px;
+  }
+  @include mq(ipad){
+	height: 975px;
+  }
+  @include mq(desktop){
+	height: 900px;
+  }
   background-color: #30404c;
   .banding {
     background: url("../images/code-background.png");
-    margin-top:470px;
+	opacity: 0.6;
+    //margin-top:285px;
     background-size: cover;
-    height: 175px;
-  }
-  .wrap {
-	width: 50%;
-	margin: 0 auto;
-	padding-left: 60px;
-	height: 80px;
-
-	.iconWrapper {
-	  padding-top: 6px;
-	  margin: 0 auto;
-	  width:15%;
-	  text-align: center;
+    height: 275px;
+	@include mq(iphone) {
+	  margin-top:80px;
+	  height: 110px;
 	}
+	@include mq(iphone6p) {
+	  margin-top:236px;
+	  height: 150px;
+	}
+	@include mq(360, 640) {
+	  margin-top:160px;
+	  height: 140px;
+	}
+	@include mq(small) {
+	  margin-top:165px;
+	  height: 150px;
+	}
+	@include mq(ipad) {
+	  margin-top:450px;
+	  height: 200px;
+	}
+	@include mq(large) {
+	  margin-top:285px;
+	  height: 275px;
+	}
+  }
+}
+
+.wrap {
+  width: 50%;
+  margin: 0 auto;
+  height: 100px;
+  text-align: center;
+  @include mq(iphone) {
+	width:100%;
   }
 }
 
 .contactMe {
   margin: 0 auto;
   padding-top: 12em;
-  //width: 50%;
   h1 {
     text-align: center;
     margin: 0 auto;
@@ -372,14 +437,34 @@ li.navContact a:hover {
 }
 
 .contactIcons {
-  margin: auto;
+  margin: 10px auto;
   width: 65px;
+  padding: 25px;
   -webkit-filter: grayscale(100%);
+  text-align: center;
   @include mq(iphone){
-    width: 30px;
+	padding:10px;
+    width: 50px;
+  }
+  @include mq(small){
+	padding:10px;
+	width: 50px;
+  }
+  @include mq(medium){
+	padding:10px;
+	width: 60px;
+  }
+  @include mq(ipad){
+	padding:10px;
+	width: 75px;
   }
   @include mq(large){
-    width: 60px;
+	padding:10px;
+	width: 80px;
+  }
+  @include mq(desktop){
+	padding: 10px;
+    width: 100px;
   }
 }
 

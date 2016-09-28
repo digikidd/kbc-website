@@ -22,11 +22,9 @@ class Contact extends React.Component {
                     <div className="wrap">
                         {this.icons.map ( ( item, index )=> {
                             return (
-                                <div key={index} className="iconWrapper col-md-1">
                                     <a href={item.LINK}>
                                         <img className="contactIcons" key={index} src={item.ICON}></img>
                                     </a>
-                                </div>
                             )
                         } )}
                     </div>

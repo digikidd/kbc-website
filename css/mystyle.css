@@ -10,20 +10,26 @@ body {
   margin-top: 55px; }
 
 .navbar-collapse {
-  background-color: #0f456d;
+  background-color: rgba(0, 11, 21, 0.1);
   margin-top: -1px; }
   @media only screen and (min-width: 320px) {
     .navbar-collapse {
-      margin-top: -1px; } }
+      margin-top: -1px;
+      background-color: rgba(0, 11, 21, 0.3); } }
+  @media only screen and (min-width: 768px) {
+    .navbar-collapse {
+      margin-top: -1px;
+      background-color: rgba(0, 11, 21, 0.1); } }
   @media only screen and (min-width: 1024px) {
     .navbar-collapse {
-      margin-top: -1px; } }
+      margin-top: -1px;
+      background-color: rgba(0, 11, 21, 0.1); } }
 
 .navbar {
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: #0f456d;
+  background-color: rgba(0, 0, 0, 0.2);
   height: 120px;
   line-height: 120px;
   -webkit-transition: height .5s, line-height .5s;
@@ -172,22 +178,25 @@ li.navContact a:hover {
   background-color: #0f6d37; }
   @media only screen and (min-width: 320px) {
     .aboutMe {
-      height: 1200px; } }
+      height: 1300px; } }
   @media only screen and (min-width: 375px) {
     .aboutMe {
-      height: 1325px; } }
+      height: 1275px; } }
   @media only screen and (min-width: 480px) {
     .aboutMe {
-      height: 1380px; } }
+      height: 1275px; } }
   @media only screen and (min-width: 640px) {
     .aboutMe {
-      height: 1380px; } }
+      height: 1325px; } }
   @media only screen and (min-width: 768px) {
     .aboutMe {
-      height: 1490px; } }
+      height: 1390px; } }
   @media only screen and (min-width: 1024px) {
     .aboutMe {
-      height: 1700px; } }
+      height: 1600px; } }
+  @media only screen and (min-width: 1200px) {
+    .aboutMe {
+      height: 1800px; } }
   .aboutMe .masthead {
     height: 600px;
     width: 100%;
@@ -202,26 +211,26 @@ li.navContact a:hover {
         background-repeat: no-repeat; } }
     @media only screen and (min-width: 480px) {
       .aboutMe .masthead {
-        height: 260px;
+        height: 250px;
         background-image: url("../images/kbc-fam-selfie-375.png");
         background-size: 100%;
         background-repeat: no-repeat; } }
     @media only screen and (min-width: 640px) {
       .aboutMe .masthead {
-        height: 350px;
+        height: 290px;
         background-image: url("../images/kbc-fam-selfie-640.png");
         background-size: 100%;
         background-repeat: no-repeat; } }
     @media only screen and (min-width: 768px) {
       .aboutMe .masthead {
-        height: 450px;
+        height: 350px;
         background-image: url("../images/kbc-fam-selfie-768.png");
         font-size: 68px;
         background-size: 100%;
         background-repeat: no-repeat; } }
     @media only screen and (min-width: 1024px) {
       .aboutMe .masthead {
-        height: 575px;
+        height: 475px;
         background-image: url("../images/kbc-fam-selfie-1024.png");
         background-size: cover;
         margin: 0;
@@ -300,7 +309,7 @@ li.navContact a:hover {
   .aboutMe .cabo {
     display: block;
     margin: 0 auto;
-    height: 200px;
+    height: 0;
     border-radius: 15px 50px;
     -webkit-filter: grayscale(100%);
     -webkit-transition: .5s ease-in-out;
@@ -309,11 +318,14 @@ li.navContact a:hover {
     padding: 18px; }
     @media only screen and (min-width: 375px) {
       .aboutMe .cabo {
-        height: 100px; } }
+        height: 0; } }
     @media only screen and (min-width: 480px) {
       .aboutMe .cabo {
-        height: 125px; } }
+        height: 0; } }
     @media only screen and (min-width: 640px) {
+      .aboutMe .cabo {
+        height: 0; } }
+    @media only screen and (min-width: 768px) {
       .aboutMe .cabo {
         height: 150px; } }
     @media only screen and (min-width: 1024px) {
@@ -330,6 +342,21 @@ li.navContact a:hover {
   font-family: 'Josefin Sans', sans-serif;
   background-color: #15619a;
   color: #e2f0fb; }
+  @media only screen and (min-width: 320px) {
+    .skills {
+      height: 880px; } }
+  @media only screen and (min-width: 480px) {
+    .skills {
+      height: 880px; } }
+  @media only screen and (min-width: 768px) {
+    .skills {
+      height: 972px; } }
+  @media only screen and (min-width: 1024px) {
+    .skills {
+      height: 925px; } }
+  @media only screen and (min-width: 1200px) {
+    .skills {
+      height: 940px; } }
   .skills h1 {
     font-size: 46px;
     text-align: center; }
@@ -404,23 +431,63 @@ li.navContact a:hover {
 .contact {
   margin: 0 auto;
   width: 100%;
-  height: 900px;
   background-color: #30404c; }
+  @media only screen and (min-width: 320px) {
+    .contact {
+      height: 520px; } }
+  @media only screen and (min-width: 375px) {
+    .contact {
+      height: 700px; } }
+  @media only screen and (min-width: 414px) {
+    .contact {
+      height: 725px; } }
+  @media only screen and (min-width: 360px) {
+    .contact {
+      height: 595px; } }
+  @media only screen and (min-width: 768px) {
+    .contact {
+      height: 975px; } }
+  @media only screen and (min-width: 1200px) {
+    .contact {
+      height: 900px; } }
   .contact .banding {
     background: url("../images/code-background.png");
-    margin-top: 470px;
+    opacity: 0.6;
     background-size: cover;
-    height: 175px; }
-  .contact .wrap {
-    width: 50%;
-    margin: 0 auto;
-    padding-left: 60px;
-    height: 80px; }
-    .contact .wrap .iconWrapper {
-      padding-top: 6px;
-      margin: 0 auto;
-      width: 15%;
-      text-align: center; }
+    height: 275px; }
+    @media only screen and (min-width: 320px) {
+      .contact .banding {
+        margin-top: 80px;
+        height: 110px; } }
+    @media only screen and (min-width: 414px) {
+      .contact .banding {
+        margin-top: 236px;
+        height: 150px; } }
+    @media only screen and (min-width: 360px) {
+      .contact .banding {
+        margin-top: 160px;
+        height: 140px; } }
+    @media only screen and (min-width: 480px) {
+      .contact .banding {
+        margin-top: 165px;
+        height: 150px; } }
+    @media only screen and (min-width: 768px) {
+      .contact .banding {
+        margin-top: 450px;
+        height: 200px; } }
+    @media only screen and (min-width: 1024px) {
+      .contact .banding {
+        margin-top: 285px;
+        height: 275px; } }
+
+.wrap {
+  width: 50%;
+  margin: 0 auto;
+  height: 100px;
+  text-align: center; }
+  @media only screen and (min-width: 320px) {
+    .wrap {
+      width: 100%; } }
 
 .contactMe {
   margin: 0 auto;
@@ -448,15 +515,35 @@ li.navContact a:hover {
     color: #15619a; }
 
 .contactIcons {
-  margin: auto;
+  margin: 10px auto;
   width: 65px;
-  -webkit-filter: grayscale(100%); }
+  padding: 25px;
+  -webkit-filter: grayscale(100%);
+  text-align: center; }
   @media only screen and (min-width: 320px) {
     .contactIcons {
-      width: 30px; } }
+      padding: 10px;
+      width: 50px; } }
+  @media only screen and (min-width: 480px) {
+    .contactIcons {
+      padding: 10px;
+      width: 50px; } }
+  @media only screen and (min-width: 640px) {
+    .contactIcons {
+      padding: 10px;
+      width: 60px; } }
+  @media only screen and (min-width: 768px) {
+    .contactIcons {
+      padding: 10px;
+      width: 75px; } }
   @media only screen and (min-width: 1024px) {
     .contactIcons {
-      width: 60px; } }
+      padding: 10px;
+      width: 80px; } }
+  @media only screen and (min-width: 1200px) {
+    .contactIcons {
+      padding: 10px;
+      width: 100px; } }
 
 .contactIcons:hover {
   cursor: pointer;

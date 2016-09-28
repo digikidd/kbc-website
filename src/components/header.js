@@ -11,7 +11,7 @@ class Header extends React.Component {
         var scrollTop = 0;
         $ (window).scroll (function () {
             scrollTop = $ (window).scrollTop ();
-            if (scrollTop >= 175) {
+            if (scrollTop >= 50) {
                 $ ('.navbar').addClass ('scrolled-nav');
             }
             else if (scrollTop < 100) {
@@ -40,10 +40,10 @@ class Header extends React.Component {
                         <div className="navbar-collapse collapse">
                             <ul className="nav navbar-nav navbar-right">
                                 <li className="navAbout">
-                                    <Link to="about" spy={true} smooth={true} offset={-54} duration={500}>about</Link>
+                                    <Link to="about" spy={true} smooth={true} offset={-50} duration={500}>about</Link>
                                 </li>
                                 <li className="navSkills">
-                                    <Link to="skills" spy={true} smooth={true} offset={-96} duration={500}>skills</Link>
+                                    <Link to="skills" spy={true} smooth={true} offset={-94} duration={500}>skills</Link>
                                 </li>
                                 <li className="navPortfolio">
                                     <Link to="portfolio" spy={true} smooth={true} offset={-50}
