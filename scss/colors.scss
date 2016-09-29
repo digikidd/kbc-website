@@ -5,6 +5,7 @@ $footercolor: #18232E;
 
 $mq-breakpoints: (
         iphone  : 320px,
+        galaxyS5: 360px,
         iphone6 : 375px,
         iphone6p: 414px,
         small   : 480px,
@@ -12,6 +13,7 @@ $mq-breakpoints: (
         ipad    : 768px,
         large   : 1024px,
         desktop : 1200px,
+		widescreen: 1920px,
 );
 
 @mixin navCollapseTopMargin {

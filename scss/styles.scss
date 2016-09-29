@@ -353,15 +353,23 @@ li.navContact a:hover {
   @include mq(iphone){
 	height: 520px;
   }
+  @include mq(galaxyS5){
+	height: 590px;
+  }
   @include mq(iphone6){
 	height: 618px;
   }
-
+  @include mq(iphone6p){
+	height: 690px;
+  }
   @include mq(ipad){
 	height: 975px;
   }
-  @include mq(desktop){
-	height: 1500px;
+  @include mq(large){
+	height: 594px;
+  }
+  @include mq(widescreen){
+	height: 1236px;
   }
   background-color: #30404c;
   .banding {
@@ -372,18 +380,29 @@ li.navContact a:hover {
 	  margin-top:80px;
 	  height: 110px;
 	}
+	@include mq(galaxyS5) {
+	  margin-top:144px;
+	  height: 150px;
+	}
 	@include mq(iphone6) {
 	  margin-top:174px;
 	  height: 150px;
 	}
-
+	@include mq(iphone6p) {
+	  margin-top:240px;
+	  height: 150px;
+	}
 	@include mq(ipad) {
 	  margin-top:450px;
 	  height: 200px;
 	}
 	@include mq(large) {
-	  margin-top:285px;
-	  height: 275px;
+	  margin-top:108px;
+	  height: 150px;
+	}
+	@include mq(widescreen) {
+	  margin-top:746px;
+	  height: 150px;
 	}
   }
 }
