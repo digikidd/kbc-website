@@ -18,3 +18,8 @@ export default function (state=[], action) {
             return state;
     }
 }
+
+var animals = {
+    dogs: 'black',
+    cats: 'nine lives'
+};

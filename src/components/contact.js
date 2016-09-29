@@ -22,8 +22,8 @@ class Contact extends React.Component {
                     <div className="wrap">
                         {this.icons.map ( ( item, index )=> {
                             return (
-                                    <a href={item.LINK}>
-                                        <img className="contactIcons" key={index} src={item.ICON}></img>
+                                    <a href={item.LINK} key={index}>
+                                        <img className="contactIcons" src={item.ICON}></img>
                                     </a>
                             )
                         } )}

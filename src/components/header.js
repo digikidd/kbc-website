@@ -53,10 +53,6 @@ class Header extends React.Component {
                                     <Link to="contact" spy={true} smooth={true} offset={-50}
                                           duration={500}>contact</Link>
                                 </li>
-                                <li className="navLogin">
-                                    <Link to="submitProject" spy={true} smooth={true} offset={-50}
-                                          duration={500}>login</Link>
-                                </li>
                             </ul>
                         </div>
                     </nav>

@@ -18,9 +18,8 @@ export default class App extends Component {
         <Introduction/>
         <AboutMe/>
         <MySkills/>
-        {/*<PortfolioContainer/>*/}
+        <PortfolioContainer/>
         <Contact/>
-        {/*<FormSubmit/>*/}
       </div>
     );
   }

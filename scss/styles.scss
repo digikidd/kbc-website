@@ -365,8 +365,14 @@ li.navContact a:hover {
   @include mq(ipad){
 	height: 975px;
   }
+  @include mq(medium){
+	height: 818px;
+  }
   @include mq(large){
-	height: 594px;
+    height: 594px;
+  }
+  @include mq(desktop){
+	height: 870px;
   }
   @include mq(widescreen){
 	height: 1236px;
@@ -396,8 +402,16 @@ li.navContact a:hover {
 	  margin-top:450px;
 	  height: 200px;
 	}
+	@include mq(medium) {
+	  margin-top:286px;
+	  height: 150px;
+	}
 	@include mq(large) {
 	  margin-top:108px;
+	  height: 150px;
+	}
+	@include mq(desktop) {
+	  margin-top:384px;
 	  height: 150px;
 	}
 	@include mq(widescreen) {

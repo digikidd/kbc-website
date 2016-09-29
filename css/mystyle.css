@@ -451,9 +451,15 @@ li.navContact a:hover {
   @media only screen and (min-width: 768px) {
     .contact {
       height: 975px; } }
+  @media only screen and (min-width: 640px) {
+    .contact {
+      height: 818px; } }
   @media only screen and (min-width: 1024px) {
     .contact {
       height: 594px; } }
+  @media only screen and (min-width: 1200px) {
+    .contact {
+      height: 870px; } }
   @media only screen and (min-width: 1920px) {
     .contact {
       height: 1236px; } }
@@ -481,9 +487,17 @@ li.navContact a:hover {
       .contact .banding {
         margin-top: 450px;
         height: 200px; } }
+    @media only screen and (min-width: 640px) {
+      .contact .banding {
+        margin-top: 286px;
+        height: 150px; } }
     @media only screen and (min-width: 1024px) {
       .contact .banding {
         margin-top: 108px;
+        height: 150px; } }
+    @media only screen and (min-width: 1200px) {
+      .contact .banding {
+        margin-top: 384px;
         height: 150px; } }
     @media only screen and (min-width: 1920px) {
       .contact .banding {
