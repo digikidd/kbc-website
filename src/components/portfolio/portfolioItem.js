@@ -1,24 +1,35 @@
-import React from "react";
+import React from 'react';
 
-class PortfolioItem extends React.Component{
 
+
+
+class PortfolioItem extends React.Component {
     render () {
         var portfolio = this.props.portfolio;
         var DefaultTitle = "kbc-ninja project";
         var DefaultDescription = "Hong Kong Fooey";
         var DefaultTechnologies = "Foobar";
         var DefaultGitHub = "https://github.com/digikidd";
-        var DefaultWebAdress = "www.kbccode.com";
-
-
+        var DefaultWebsite = "www.kbccode.com";
+        if (this.props.portfolio == undefined) {
+            return (<div>loading</div>);
+        }
+        console.log(this.props.portfolio);
         return (
-        <div className="portfolioItem col-xs-12 col-sm-4 col-lg-3">
-            <h2>{portfolio.name ? portfolio.name : DefaultTitle}</h2>
-            <h2>{portfolio.description ? portfolio.description : DefaultDescription}</h2>
-            <h2>{portfolio.technologies ? portfolio.technologies : DefaultTechnologies}</h2>
-            <h2>{portfolio.github ? portfolio.github : DefaultGitHub}</h2>
-            <h2>{portfolio.webAddress ? portfolio.webAddress : DefaultWebAdress}</h2>
-        </div>
+            <div className="list-group project-list">
+                    <h1 className="list-group-item-heading project-list">{portfolio.name ? portfolio.name : DefaultTitle}</h1>
+                    <p className="list-group-item-text project-list description">{portfolio.description ? portfolio.description : DefaultDescription}</p>
+                    <p className="list-group-item-text project-list">{
+                        portfolio.technologies ? JSON.parse(portfolio.technologies).map((item, index)=>{
+                            return (
+                                <p key={index}>{item}</p>
+                            )
+                        }) : DefaultTechnologies
+                    }</p>
+                    <div className="portfolio-icons"><a href={portfolio.github ? portfolio.github : DefaultGitHub} className="list-group-item active project-list"><img className="git" src="../../images/github.png"/></a></div>
+                    <div className="portfolio-icons"><a href={portfolio.website ? portfolio.website : DefaultWebsite} className="list-group-item active project-list"><img className="git" src="../../images/link.png"/></a></div>
+                <hr className="hrSkill"/>
+            </div>
         )
     }
 }

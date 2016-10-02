@@ -8,7 +8,6 @@ import AboutMe from "./aboutMe";
 import MySkills from "./mySkills";
 import PortfolioContainer from "./portfolio/portfoliocontainer";
 import Contact from "./contact";
-import FormSubmit from "./formsubmit";
 
 export default class App extends Component {
   render() {

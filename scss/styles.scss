@@ -6,8 +6,9 @@ body {
 }
 
 .main {
-  height: 6300px;
+  height: 6400px;
   margin: 0;
+  background-color: #1F3D54;
 }
 
 .navbar-toggle {
@@ -347,7 +348,7 @@ li.navContact a:hover {
 }
 
 .contact {
-  margin: 0 auto;
+  margin: -10px auto;
   width: 100%;
   height:2400px;
   @include mq(iphone){
@@ -412,7 +413,7 @@ li.navContact a:hover {
 	}
 	@include mq(desktop) {
 	  margin-top:384px;
-	  height: 150px;
+	  height: 178px;
 	}
 	@include mq(widescreen) {
 	  margin-top:746px;
@@ -499,31 +500,46 @@ li.navContact a:hover {
   -o-transition: .5s ease-in-out;
 }
 
-.submitProject {
-  height: 900px;
+.portfolio	{
+  height: 1900px;
   margin: auto;
   width: 100%;
   font-family: 'Josefin Sans', sans-serif;
-  background-color: #15619a;
+  background-color: rgba(15, 69, 109, 0.86);
   color: $txtcolor;
-  .projectInfo {
-    border: 1px solid #CB2027;
-    margin: 0 auto;
-    width: 35%;
-    input {
-      color: #000;
-    }
-    label {
-      padding: 6px;;
-    }
+  @include lg-text;
+  strong {
+	color: $bkgndcolorlight;
   }
 }
 
-.portfolioItem {
-  background-color: #0275B6;
-  padding: 10px;
+.project-list {
+  background-color: rgba(15, 69, 109, 0.86)!important;
+  width:90%;
+  margin:0 auto;
+  //padding: 6px;
+  display: inline-block;
+  .description {
+	text-align: center;
+  }
+  .git {
+	width: 40px;
+  }
+  .portfolio-icons {
+	width:10%;
+	display: inline-block;
+	margin:auto;
+  }
 }
 
+.list-group-item {
+  border:none;
+}
+
+.description {
+  width: 50%;
+
+}
 hr.faded {
   height: 2px;
   border: 0;

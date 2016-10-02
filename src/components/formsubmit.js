@@ -14,7 +14,7 @@ class FormSubmit extends React.Component {
         this.kbcProjects.description = this.refs.description.value;
         this.kbcProjects.github = this.refs.github.value;
         this.kbcProjects.technologies = this.refs.technologies.value;
-        this.kbcProjects.webAddress = this.refs.webAddress.value;
+        this.kbcProjects.website = this.refs.website.value;
         this.props.savePortfolio(this.kbcProjects);
 
     }

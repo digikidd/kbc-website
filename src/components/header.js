@@ -46,11 +46,11 @@ class Header extends React.Component {
                                     <Link to="skills" spy={true} smooth={true} offset={-94} duration={500}>skills</Link>
                                 </li>
                                 <li className="navPortfolio">
-                                    <Link to="portfolio" spy={true} smooth={true} offset={-50}
+                                    <Link to="portfolio" spy={true} smooth={true} offset={-60}
                                           duration={500}>portfolio</Link>
                                 </li>
                                 <li className="navContact">
-                                    <Link to="contact" spy={true} smooth={true} offset={-50}
+                                    <Link to="contact" spy={true} smooth={true} offset={-45}
                                           duration={500}>contact</Link>
                                 </li>
                             </ul>

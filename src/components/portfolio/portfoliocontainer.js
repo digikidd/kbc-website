@@ -10,15 +10,13 @@ class PortfolioContainer extends React.Component {
     }
 
     render () {
-
         if (this.props.portfolioItems == undefined) {
             return (<div>loading</div>);
         }
-        //console.log(this.props.portfolioItems);
         return (
             <div className="portfolio">
                 <Element name="portfolio" className="portfolio">
-                    <h2>Portfolio Title Goes Here</h2>
+                    <h1>a few <strong>hand-coded</strong> projects...</h1>
                     <div className="row">
                     {
                         this.props.portfolioItems.portfolioItems.map((item, index)=>{
