@@ -12,7 +12,7 @@ import axios from "axios";
 export const getProjects = () => {
 
    //const request = axios.get("https://frozen-falls-23864.herokuapp.com/portfolio/all");
-   const request = axios.get("https://localhost:3131/portfolio/all");
+   const request = axios.get("http://localhost:3131/portfolio/all");
    return {
       type: "GETTING_PROJECTS",
       payload: request
