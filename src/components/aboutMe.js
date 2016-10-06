@@ -15,19 +15,21 @@ class AboutMe extends React.Component {
                     </p>
                     <h4>a little <strong>about</strong> me</h4>
                     <p>
-                        My background is one of creative aspirations ranging from sound design and live music engineering at places like XM Radio and Compass Learning to expanding my skills with front-end and back-end web development.
+                        My background is one of creative aspirations ranging from sound design and live music engineering at places like XM Radio, Foxx On The Run, and Compass Learning to programming for TRX Data Services and ultimately expanding my skill-sets with various front-end/back-end web development projects.
                     </p>
                     <p>
                         I started my journey with sound design and audio production in a small production house creating radio imaging and promos
                     </p>
                     <p>
-                        to working at a satellite radio company on a global level.
+                        to working at a satellite radio company creating imaging at a national and even global level.
                     </p>
+                    <br/>
                     <p>
-                        I quickly became obsessed and fascinated with computers and technology which ultimately led to discovering the amazing world of programming.
+                        I quickly became obsessed and fascinated with computers and technology which ultimately led to discovering the world of programming. This led to going back to school for a programming languages education and from there a programming position at TRX Data Services.
                     </p>
+                    <br/>
                     <p>
-                        I am passionate about using my creativity and logic to create exciting and engaging websites and web applications.
+                        I am passionate about using my creativity and logic creating websites, web applications, or mobile apps.
                     </p>
                     <br/>
                     <p>

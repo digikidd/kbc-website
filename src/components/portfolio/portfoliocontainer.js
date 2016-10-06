@@ -17,7 +17,6 @@ class PortfolioContainer extends React.Component {
             <div className="portfolio">
                 <Element name="portfolio" className="portfolio">
                     <h1>a <strong>few</strong> hand-<strong>coded</strong> projects...</h1>
-                    <div className="row">
                     {
                         this.props.portfolioItems.portfolioItems.map((item, index)=>{
                             return (
@@ -25,7 +24,6 @@ class PortfolioContainer extends React.Component {
                             )
                         })
                     }
-                    </div>
                 </Element>
             </div>
         )

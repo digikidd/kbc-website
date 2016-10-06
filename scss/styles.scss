@@ -1,579 +1,800 @@
 @import 'colors';
 @import "../node_modules/mq-sass/stylesheets/mq-sass";
 
-body {
+body
+{
   overflow-x: hidden;
 }
 
-.main {
-  height: 6400px;
-  margin: 0;
-  background-color: #1F3D54;
+.main
+{
+  height:           5800px;
+  margin:           0;
+  background-color: #1f3d54;
+  @include mq(iphone)
+  {
+	height: 5600px;
+  }
+  @include mq(ipad)
+  {
+	height: 6600px;
+  }
+  @include mq(large)
+  {
+	height: 5800px;
+  }
 }
 
-.navbar-toggle {
+.navbar-toggle
+{
   margin-top: 55px;
 }
 
-.navbar-collapse {
+.navbar-collapse
+{
   background-color: rgba(0, 11, 21, 0.1);
-  margin-top: -1px;
-  @include mq(iphone) {
-    margin-top: -1px;
+  margin-top:       -1px;
+  @include mq(iphone)
+  {
+	margin-top:       -1px;
 	background-color: rgba(0, 11, 21, 0.3);
   }
-  @include mq(ipad) {
-	margin-top: -1px;
+  @include mq(ipad)
+  {
+	margin-top:       -1px;
 	background-color: rgba(0, 11, 21, 0.1);
   }
-  @include mq(large) {
-    margin-top: -1px;
+  @include mq(large)
+  {
+	margin-top:       -1px;
 	background-color: rgba(0, 11, 21, 0.1);
   }
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.2);
-  height: 120px;
-  line-height: 120px;
+.navbar
+{
+  position:           fixed;
+  top:                0;
+  z-index:            100;
+  background-color:   rgba(0, 0, 0, 0.2);
+  height:             120px;
+  line-height:        120px;
   -webkit-transition: height .5s, line-height .5s;
   @include lg-text;
-  ul {
-    list-style: none;
-    margin-top: 64px;
-    margin-right: 24px;
-    -webkit-transition: all .5s;
-    transition: all .5s;
+  ul
+  {
+	list-style:         none;
+	margin-top:         64px;
+	margin-right:       24px;
+	-webkit-transition: all .5s;
+	transition:         all .5s;
   }
-  .kbc-logo {
-    display: inline-block;
-    margin-top: -6px;
-    margin-left: 15px;
-    height: 70px;
-    -webkit-transition: all .6s;
-    transition: all .6s;
+  .kbc-logo
+  {
+	display:            inline-block;
+	margin-top:         -6px;
+	margin-left:        15px;
+	height:             70px;
+	-webkit-transition: all .6s;
+	transition:         all .6s;
   }
 }
 
-.navbar-nav {
+.navbar-nav
+{
   @include navCollapseTopMargin();
 }
 
-.scrolled-nav {
-  margin-top: 0;
-  height: 40px !important;
+.scrolled-nav
+{
+  margin-top:  0;
+  height:      40px !important;
   line-height: 46px !important;
-  .kbc-logo {
-    margin-top: 2px;
-    height: 35px;
+  .kbc-logo
+  {
+	margin-top: 2px;
+	height:     35px;
   }
-  ul {
-    //margin-top: 0;
-    -webkit-transition: all .5s;
-    transition: all .5s;
+  ul
+  {
+	//margin-top: 0;
+	-webkit-transition: all .5s;
+	transition:         all .5s;
   }
-  .navbar-collapse {
-    margin-top: -1px;
-    width: 100%;
+  .navbar-collapse
+  {
+	margin-top: -1px;
+	width:      100%;
   }
-  .navbar-toggle {
-    margin-top: 8px;
+  .navbar-toggle
+  {
+	margin-top: 8px;
   }
 }
 
-li.navAbout a:hover {
+li.navAbout a:hover
+{
   color: #0f6d37 !important;
 }
 
-li.navSkills a:hover {
+li.navSkills a:hover
+{
   color: #15619a !important;
 }
 
-li.navPortfolio a:hover {
+li.navPortfolio a:hover
+{
   color: mediumseagreen !important;
 }
 
-li.navContact a:hover {
+li.navContact a:hover
+{
   color: #061a2a !important;
 }
 
-.logo, .navAbout, .navSkills, .navPortfolio, .navContact, .navLinks, .navLogin {
+.logo, .navAbout, .navSkills, .navPortfolio, .navContact, .navLinks, .navLogin
+{
   cursor: pointer;
 }
 
-.introduction {
+.introduction
+{
   background-color: rgba(15, 69, 109, 0.86);
-  text-align: center;
-  height: 1000px;
+  text-align:       center;
+  height:           1000px;
 }
 
-.intro-text {
-  box-sizing: border-box;
-  display: inline-block;
-  text-align: center;
-  margin-top: 200px;
-  font-size: 72px;
+.intro-text
+{
+  box-sizing:  border-box;
+  display:     inline-block;
+  text-align:  center;
+  margin-top:  200px;
+  font-size:   72px;
   font-family: 'Josefin Sans', sans-serif;
-  color: $txtcolor;
+  color:       $txtcolor;
   @include introTextResize();
 }
 
-.kbcHeading {
-  margin-top: 10px;
+.kbcHeading
+{
+  margin-top:  10px;
   font-family: 'Oxygen', sans-serif;
-  color: $bkgndcolorlight;
-  p {
-    font-size: 28px;
-    font-family: 'Josefin Sans', sans-serif;
-    color: $bkgndcolorlight;
-    @include kbcHeadingResize();
+  color:       $bkgndcolorlight;
+  p
+  {
+	font-size:   28px;
+	font-family: 'Josefin Sans', sans-serif;
+	color:       $bkgndcolorlight;
+	@include kbcHeadingResize();
   }
 }
 
-.kbcHeading2 {
-  margin-top: 20px;
+.kbcHeading2
+{
+  margin-top:  20px;
   font-family: 'Oxygen', sans-serif;
-  color: $bkgndcolorlight;
-  strong {
-    font-family: 'Oxygen', sans-serif;
-    color: $txtcolor;
+  color:       $bkgndcolorlight;
+  strong
+  {
+	font-family: 'Oxygen', sans-serif;
+	color:       $txtcolor;
   }
   @include kbcHeading2Resize();
 }
 
-.aboutMe {
-  font-family: 'Oxygen', sans-serif;
-  height: 1700px;
-  margin-top: -10px;
-  margin-bottom: -20px;
+.aboutMe
+{
+  font-family:      'Oxygen', sans-serif;
+  height:           1700px;
+  margin-top:       -10px;
+  margin-bottom:    -20px;
   background-color: #0f6d37;
-  @include mq(iphone) {
-    height: 1300px;
+  @include mq(iphone)
+  {
+	height: 1300px;
   }
-  @include mq(iphone6) {
-    height: 1275px;
+  @include mq(iphone6)
+  {
+	height: 1275px;
   }
-  @include mq(small) {
-    height: 1275px;
+  @include mq(small)
+  {
+	height: 1275px;
   }
-  @include mq(medium) {
-    height: 1325px;
+  @include mq(medium)
+  {
+	height: 1325px;
   }
-  @include mq(ipad) {
-    height: 1390px;
+  @include mq(ipad)
+  {
+	height: 1390px;
   }
-  @include mq(large) {
-    height: 1600px;
+  @include mq(large)
+  {
+	height: 1600px;
   }
-  @include mq(desktop) {
+  @include mq(desktop)
+  {
 	height: 1800px;
   }
-  .masthead {
-    height: 600px;
-    width: 100%;
-    background-size: cover;
-    background: url("../images/kbc-fam-selfie-1024.png");
-    @include mastHeadResize();
+  .masthead
+  {
+	height:          600px;
+	width:           100%;
+	background-size: cover;
+	background:      url("../images/kbc-fam-selfie-1024.png");
+	@include mastHeadResize();
   }
-  h4 {
-    padding-top: 12px;
-    padding-left: 100px;
-    padding-bottom: 24px;
-    font-size: 32px;
-    color: $txtcolor;
-    @include aboutMeTextResize();
+  h4
+  {
+	padding-top:    12px;
+	padding-left:   100px;
+	padding-bottom: 24px;
+	font-size:      32px;
+	color:          $txtcolor;
+	@include aboutMeTextResize();
   }
-  h5 {
-    text-align: center;
-    font-size: 20px;
-    color: $txtcolor;
-    @include aboutMeTextResize();
+  h5
+  {
+	text-align: center;
+	font-size:  20px;
+	color:      $txtcolor;
+	@include aboutMeTextResize();
   }
-  strong {
-    color: $bkgndcolorlight;
+  strong
+  {
+	color: $bkgndcolorlight;
   }
-  p {
-    font-size: 24px;
-    font-family: 'Josefin Sans', sans-serif;
-    color: $bkgndcolorlight;
-    padding-left: 100px;
-    padding-right: 50px;
-    text-align: left;
-    @include aboutMeTextResize();
+  p
+  {
+	font-size:     24px;
+	font-family:   'Josefin Sans', sans-serif;
+	color:         $bkgndcolorlight;
+	padding-left:  100px;
+	padding-right: 50px;
+	text-align:    left;
+	@include aboutMeTextResize();
   }
-  .cabo {
-    display: block;
-    margin: 0 auto;
-    height: 0;
-    border-radius: 15px 50px;
-    -webkit-filter: grayscale(100%);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    padding: 18px;
-    @include mq(iphone6) {
-      height: 0;
-    }
-    @include mq(small) {
-      height: 0;
-    }
-    @include mq(medium) {
-      height: 0;
-    }
-	@include mq(ipad) {
+  .cabo
+  {
+	display:            block;
+	margin:             0 auto;
+	height:             0;
+	border-radius:      15px 50px;
+	-webkit-filter:     grayscale(100%);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition:    .5s ease-in-out;
+	-o-transition:      .5s ease-in-out;
+	padding:            18px;
+	@include mq(iphone6)
+	{
+	  height: 0;
+	}
+	@include mq(small)
+	{
+	  height: 0;
+	}
+	@include mq(medium)
+	{
+	  height: 0;
+	}
+	@include mq(ipad)
+	{
 	  height: 150px;
 	}
-    @include mq(large) {
-      height: 180px;
-    }
+	@include mq(large)
+	{
+	  height: 180px;
+	}
   }
-  .cabo:hover {
-    -webkit-filter: grayscale(0%);
+  .cabo:hover
+  {
+	-webkit-filter: grayscale(0%);
   }
 
 }
 
-.skills {
-  height: 910px;
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 24px;
-  font-family: 'Josefin Sans', sans-serif;
+.skills
+{
+  height:           910px;
+  margin:           0 auto;
+  width:            100%;
+  padding-top:      24px;
+  font-family:      'Josefin Sans', sans-serif;
   background-color: #15619a;
-  color: $txtcolor;
-  border: none;
-  @include mq(iphone) {
+  color:            $txtcolor;
+  border:           none;
+  @include mq(iphone)
+  {
 	height: 700px;
   }
-  @include mq(iphone6) {
-    height: 700px;
+  @include mq(iphone6)
+  {
+	height: 700px;
   }
-  @include mq(small) {
+  @include mq(small)
+  {
 	height: 880px;
   }
-  @include mq(ipad) {
+  @include mq(ipad)
+  {
 	height: 972px;
   }
-  @include mq(large) {
+  @include mq(large)
+  {
 	height: 925px;
   }
-  @include mq(desktop) {
+  @include mq(desktop)
+  {
 	height: 940px;
   }
-  h1 {
-    font-size: 46px;
-    text-align: center;
+  h1
+  {
+	font-size:  46px;
+	text-align: center;
   }
-  strong {
-    color: $bkgndcolorlight;
+  strong
+  {
+	color: $bkgndcolorlight;
   }
 
-  .skill {
-    margin:0 auto;
-    width: 100%;
-    .table-responsive {
-      margin:0 auto;
-      width:56%;
-      @include mq(iphone){
-        width:80%;
-      }
-      @include mq(small){
-        width:60%;
-      }
-      @include mq(large){
-        width:56%;
-      }
-    }
-      tr {
-        width: 100%;
-      }
-      td {
-        border-top: none !important;
-      }
-    .skill-names {
-      padding-left: 60px;
-      font-size: 26px;
-      font-weight: 400;
-      @include mq(iphone){
-        font-size: 14px;
-        padding-left: 20px;
-      }
-      @include mq(small){
-        font-size: 18px;
-        padding-left: 30px;
-      }
-      @include mq(large){
-        font-size: 24px;
-        padding-left: 60px;
-      }
-    }
-    .skill-stars{
-      float: left;
-      width: 90%;
-    }
-    img {
-      padding: 2px;
-      width: 30px;
-      float: right;
-      @include mq(iphone){
-        width: 14px;
-      }
-      @include mq(small){
-        width: 20px;
-      }
-      @include mq(large){
-        width: 26px;
-      }
-    }
+  .skill
+  {
+	margin: 0 auto;
+	width:  100%;
+	.table-responsive
+	{
+	  margin: 0 auto;
+	  width:  56%;
+	  @include mq(iphone)
+	  {
+		width: 80%;
+	  }
+	  @include mq(small)
+	  {
+		width: 60%;
+	  }
+	  @include mq(large)
+	  {
+		width: 56%;
+	  }
+	}
+	tr
+	{
+	  width: 100%;
+	}
+	td
+	{
+	  border-top: none !important;
+	}
+	.skill-names
+	{
+	  padding-left: 60px;
+	  font-size:    26px;
+	  font-weight:  400;
+	  @include mq(iphone)
+	  {
+		font-size:    14px;
+		padding-left: 20px;
+	  }
+	  @include mq(small)
+	  {
+		font-size:    18px;
+		padding-left: 30px;
+	  }
+	  @include mq(large)
+	  {
+		font-size:    24px;
+		padding-left: 60px;
+	  }
+	}
+	.skill-stars
+	{
+	  float: left;
+	  width: 90%;
+	}
+	img
+	{
+	  padding: 2px;
+	  width:   30px;
+	  float:   right;
+	  @include mq(iphone)
+	  {
+		width: 14px;
+	  }
+	  @include mq(small)
+	  {
+		width: 20px;
+	  }
+	  @include mq(large)
+	  {
+		width: 26px;
+	  }
+	}
   }
 }
 
-.hrSkill {
-  margin: 24px auto;
-  width: 90%;
-  border: 0;
-  height: 1px;
+.hrSkill
+{
+  margin:           24px auto;
+  width:            90%;
+  border:           0;
+  height:           1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-.portfolio {
+.portfolio
+{
   margin-top: 10px;
-  padding: 10px;
+  padding:    10px;
   text-align: center;
-  img {
-    width: 100%;
+  img
+  {
+	width: 100%;
   }
 }
 
-.contact {
-  margin: -10px auto;
-  width: 100%;
-  height:2400px;
-  @include mq(iphone){
+.contact
+{
+  margin:           -10px auto;
+  width:            100%;
+  height:           2400px;
+  @include mq(iphone)
+  {
 	height: 520px;
   }
-  @include mq(galaxyS5){
-	height: 590px;
-  }
-  @include mq(iphone6){
+  @include mq(iphone6)
+  {
 	height: 618px;
   }
-  @include mq(iphone6p){
+  @include mq(iphone6p)
+  {
 	height: 690px;
   }
-  @include mq(ipad){
+  @include mq(medium)
+  {
 	height: 975px;
   }
-  @include mq(medium){
-	height: 818px;
-  }
-  @include mq(large){
-    height: 594px;
-  }
-  @include mq(desktop){
+  @include mq(large)
+  {
 	height: 900px;
   }
-  @include mq(widescreen){
-	height: 1236px;
-  }
   background-color: #30404c;
-  .banding {
-    background: url("../images/code-background.png");
-	opacity: 0.6;
-    background-size: cover;
-	@include mq(iphone) {
-	  margin-top:80px;
-	  height: 110px;
+  .banding
+  {
+	background:      url("../images/code-background.png");
+	opacity:         0.6;
+	background-size: cover;
+	@include mq(iphone)
+	{
+	  margin-top: 80px;
+	  height:     110px;
 	}
-	@include mq(galaxyS5) {
-	  margin-top:144px;
-	  height: 150px;
+	@include mq(galaxyS5)
+	{
+	  margin-top: 144px;
+	  height:     150px;
 	}
-	@include mq(iphone6) {
-	  margin-top:174px;
-	  height: 150px;
+	@include mq(iphone6)
+	{
+	  margin-top: 174px;
+	  height:     150px;
 	}
-	@include mq(iphone6p) {
-	  margin-top:240px;
-	  height: 150px;
+	@include mq(iphone6p)
+	{
+	  margin-top: 240px;
+	  height:     150px;
 	}
-	@include mq(ipad) {
-	  margin-top:450px;
-	  height: 200px;
+	@include mq(ipad)
+	{
+	  margin-top: 450px;
+	  height:     200px;
 	}
-	@include mq(medium) {
-	  margin-top:286px;
-	  height: 150px;
+	@include mq(medium)
+	{
+	  margin-top: 286px;
+	  height:     150px;
 	}
-	@include mq(large) {
-	  margin-top:108px;
-	  height: 150px;
+	@include mq(large)
+	{
+	  margin-top: 108px;
+	  height:     150px;
 	}
-	@include mq(desktop) {
-	  margin-top:384px;
-	  height: 178px;
+	@include mq(desktop)
+	{
+	  margin-top: 384px;
+	  height:     178px;
 	}
-	@include mq(widescreen) {
-	  margin-top:746px;
-	  height: 150px;
+	@include mq(widescreen)
+	{
+	  margin-top: 746px;
+	  height:     150px;
 	}
   }
 }
 
-.wrap {
-  width: 50%;
-  margin: 0 auto;
-  height: 100px;
+.wrap
+{
+  width:      50%;
+  margin:     0 auto;
+  height:     100px;
   text-align: center;
-  @include mq(iphone) {
-	width:100%;
+  @include mq(iphone)
+  {
+	width: 100%;
   }
 }
 
-.contactMe {
-  margin: 0 auto;
+.contactMe
+{
+  margin:      0 auto;
   padding-top: 12em;
-  h1 {
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    color: $txtcolor;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 62px;
-    @include mq(iphone){
-	  width:100%;
-      font-size: 28px;
-    }
-	@include mq(medium){
-	  width: 100%;
+  h1
+  {
+	text-align:  center;
+	margin:      0 auto;
+	width:       100%;
+	color:       $txtcolor;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:   62px;
+	@include mq(iphone)
+	{
+	  width:     100%;
+	  font-size: 28px;
+	}
+	@include mq(medium)
+	{
+	  width:     100%;
 	  font-size: 52px;
 	}
-    @include mq(large){
-	  width: 100%;
-      font-size: 62px;
-    }
+	@include mq(large)
+	{
+	  width:     100%;
+	  font-size: 62px;
+	}
   }
-  strong {
-    color: #15619a;
+  strong
+  {
+	color: #15619a;
   }
 }
 
-.contactIcons {
-  margin: 10px auto;
-  width: 65px;
-  padding: 25px;
+.contactIcons
+{
+  margin:         10px auto;
+  width:          65px;
+  padding:        25px;
   -webkit-filter: grayscale(100%);
-  text-align: center;
-  @include mq(iphone){
-	padding:10px;
-    width: 50px;
-  }
-  @include mq(small){
-	padding:10px;
-	width: 50px;
-  }
-  @include mq(medium){
-	padding:10px;
-	width: 60px;
-  }
-  @include mq(ipad){
-	padding:10px;
-	width: 75px;
-  }
-  @include mq(large){
-	padding:10px;
-	width: 80px;
-  }
-  @include mq(desktop){
+  text-align:     center;
+  @include mq(iphone)
+  {
 	padding: 10px;
-    width: 100px;
+	width:   50px;
+  }
+  @include mq(small)
+  {
+	padding: 10px;
+	width:   50px;
+  }
+  @include mq(medium)
+  {
+	padding: 10px;
+	width:   60px;
+  }
+  @include mq(ipad)
+  {
+	padding: 10px;
+	width:   75px;
+  }
+  @include mq(large)
+  {
+	padding: 10px;
+	width:   80px;
+  }
+  @include mq(desktop)
+  {
+	padding: 10px;
+	width:   100px;
   }
 }
 
-.contactIcons:hover {
-  cursor: pointer;
-  -webkit-filter: grayscale(0%);
+.contactIcons:hover
+{
+  cursor:             pointer;
+  -webkit-filter:     grayscale(0%);
   -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
+  -moz-transition:    .5s ease-in-out;
+  -o-transition:      .5s ease-in-out;
 }
 
-.portfolio	{
-  height: 2400px;
-  margin: auto;
-  width: 100%;
-  font-family: 'Josefin Sans', sans-serif;
-  background-color: rgba(15, 69, 109, 0.86);
-  color: $txtcolor;
+.portfolio
+{
+  height:           1200px;
+  margin:           auto;
+  width:            100%;
+  font-family:      'Josefin Sans', sans-serif;
+  background-color: rgba(15, 69, 109, 0.4);
+  color:            $txtcolor;
   @include lg-text;
-  h1 {
-	margin-top: 40px;
+  h1
+  {
+	margin-top:     40px;
 	padding-bottom: 60px;
-	font-size: 48px;
+	font-size:      48px;
   }
-  strong {
-	color: $bkgndcolorlight;
+  strong
+  {
+	color: #3a8d4d;
   }
-}
-
-.project-list {
-  background-color: rgba(15, 69, 109, 0.86)!important;
-  width:90%;
-  margin:0 auto;
-  padding: 6px;
-  display: inline-block;
-  .p-name {
-	font-size: 42px;
-	font-weight: 800;
-	padding-bottom: 12px;
-	color: #061a2a;
+  @include mq (iphone)
+  {
+	height: 2200px;
   }
-  strong {
-	color: $bkgndcolorlight;
-  }
-  .p-desc {
-	text-align: center;
-	font-family: 'Oxygen', sans-serif;
-	font-weight: 100;
-	font-size: 18px;
-	padding-bottom: 24px;
-  }
-  .p-tech {
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 26px;
-	font-weight: 700;
-	padding-bottom: 12px;
-  }
-  .p-tech-li {
-	font-family: 'Oxygen', sans-serif;
-	font-size: 16px;
-  }
-  .git {
-	width: 40px;
-  }
-  .portfolio-icons {
-	width:10%;
-	display: inline-block;
-	margin:auto;
+  @include mq (large)
+  {
+	height: 1200px;
   }
 }
 
-.list-group-item {
-  border:none;
-}
-
-.description {
-  width: 50%;
-}
-hr.faded {
-  height: 2px;
-  border: 0;
-  width: 25%;
+hr.faded
+{
+  height:     2px;
+  border:     0;
+  width:      25%;
   box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 }
 
+.p-list
+{
+  -webkit-border-radius: 6px;
+  display:               inline-block;
+  height:                350px;
+  width:                 30%;
+  margin:                15px 10px auto;
+  font-size:             18px;
+  font-weight:           600;
+  background-color:      #3a8d4d;
+  vertical-align:        top;
+  padding:               12px;
+  color:                 $txtcolor;
+  .p-name
+  {
+	text-align:  center;
+	font-size:   30px;
+	font-weight: bolder;
+	font-family: 'Josefin Sans', sans-serif;
+	color:       $bkgndcolorlight;
+  }
+  .p-desc
+  {
+	text-align:    justify;
+	padding-left:  20px;
+	padding-right: 20px;
+	color:         $bkgndcolorlight;
+  }
+  .p-tech
+  {
+	text-align:    justify;
+	font-size:     20px;
+	font-weight:   bolder;
+	padding-top:   12px;
+	padding-left:  20px;
+	padding-right: 20px;
+	color:         #3a8d4d;
+  }
 
+  .p-tech-list
+  {
+	font-size:   18px;
+	font-weight: bolder;
+	margin-top:  -30px;
+	margin-left: 180px;
+	padding-top: 5px;
+	text-align:  justify;
+	color:       #3a8d4d;
+  }
+  .portfolio-icons-l
+  {
+	text-align: left;
+	display:    inline-block;
+	width:      50%;
+  }
+  .portfolio-icons-r
+  {
+	text-align: right;
+	display:    inline-block;
+	width:      50%;
+  }
+
+  .git
+  {
+	height: 35px;
+	width:  35px;
+  }
+  @include mq (iphone)
+  {
+	display:   block;
+	width:     90%;
+	margin:    10px auto;
+	font-size: 14px;
+	.p-name
+	{
+	  font-size: 22px;
+	}
+	.p-tech
+	{
+	  font-size: 16px;
+	}
+	.p-tech-list
+	{
+	  font-size:  14px;
+	  margin-top: -24px;
+	}
+  }
+  @include mq (large)
+  {
+	display:   inline-block;
+	width:     30%;
+	margin:    15px 10px auto;
+	font-size: 18px;
+	.p-name
+	{
+	  font-size: 30px;
+	}
+	.p-tech
+	{
+	  font-size: 20px;
+	}
+	.p-tech-list
+	{
+	  font-size:  18px;
+	  margin-top: -30px;
+	}
+  }
+}
+
+.p-list:hover
+{
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow:    5px 5px 5px rgba(0, 0, 0, 0.4);
+  box-shadow:         5px 5px 5px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 1s ease;
+  -moz-transition:    all 1s ease;
+  -ms-transition:     all 1s ease;
+  -o-transition:      all 1s ease;
+  transition:         all 1s ease;
+}
+
+.greyOut
+{
+  -webkit-opacity:    0.20;
+  -moz-opacity:       0.25;
+  opacity:            0.25;
+  -webkit-transition: all .5s ease;
+  -moz-transition:    all .5s ease;
+  -ms-transition:     all .5s ease;
+  -o-transition:      all .5s ease;
+  transition:         all .5s ease;
+}
+
+.greyOut:hover
+{
+  -webkit-opacity:    1;
+  -moz-opacity:       1;
+  opacity:            1;
+  -webkit-transition: all .5s ease;
+  -moz-transition:    all .5s ease;
+  -ms-transition:     all .5s ease;
+  -o-transition:      all .5s ease;
+  transition:         all .5s ease;
+  .p-tech
+  {
+	color: $bkgndcolorlight;
+  }
+  .p-tech-list
+  {
+	color: #e2f0fb;
+  }
+}
 
