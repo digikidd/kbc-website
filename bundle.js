@@ -23567,7 +23567,7 @@
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        'My background is one of creative aspirations ranging from sound design and live music engineering at places like XM Radio and Compass Learning to expanding my skills with front-end and back-end web development.'
+	                        'My background is one of creative aspirations ranging from sound design and live music engineering at places like XM Radio, Foxx On The Run, and Compass Learning to programming for TRX Data Services and ultimately expanding my skill-sets with various front-end/back-end web development projects.'
 	                    ),
 	                    _react2.default.createElement(
 	                        'p',
@@ -23577,17 +23577,19 @@
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        'to working at a satellite radio company on a global level.'
+	                        'to working at a satellite radio company creating imaging at a national and even global level.'
 	                    ),
+	                    _react2.default.createElement('br', null),
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        'I quickly became obsessed and fascinated with computers and technology which ultimately led to discovering the amazing world of programming.'
+	                        'I quickly became obsessed and fascinated with computers and technology which ultimately led to discovering the world of programming. This led to going back to school for a programming languages education and from there a programming position at TRX Data Services.'
 	                    ),
+	                    _react2.default.createElement('br', null),
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        'I am passionate about using my creativity and logic to create exciting and engaging websites and web applications.'
+	                        'I am passionate about using my creativity and logic creating websites, web applications, or mobile apps.'
 	                    ),
 	                    _react2.default.createElement('br', null),
 	                    _react2.default.createElement(
@@ -23821,13 +23823,9 @@
 	                        ),
 	                        " projects..."
 	                    ),
-	                    _react2.default.createElement(
-	                        "div",
-	                        { className: "row" },
-	                        this.props.portfolioItems.portfolioItems.map(function (item, index) {
-	                            return _react2.default.createElement(_portfolioItem2.default, { key: index, portfolio: item });
-	                        })
-	                    )
+	                    this.props.portfolioItems.portfolioItems.map(function (item, index) {
+	                        return _react2.default.createElement(_portfolioItem2.default, { key: index, portfolio: item });
+	                    })
 	                )
 	            );
 	        }
@@ -23878,11 +23876,6 @@
 	        key: "render",
 	        value: function render() {
 	            var portfolio = this.props.portfolio;
-	            var DefaultTitle = "kbc-ninja project";
-	            var DefaultDescription = "Hong Kong Fooey";
-	            var DefaultTechnologies = "Foobar";
-	            var DefaultGitHub = "https://github.com/digikidd";
-	            var DefaultWebsite = "www.kbccode.com";
 
 	            if (this.props.portfolio == undefined) {
 	                return _react2.default.createElement(
@@ -23894,48 +23887,52 @@
 
 	            return _react2.default.createElement(
 	                "div",
-	                { className: "list-group project-list" },
-	                _react2.default.createElement(
-	                    "p",
-	                    { className: "list-group-item-heading project-list p-name" },
-	                    portfolio.name ? portfolio.name : DefaultTitle
-	                ),
-	                _react2.default.createElement(
-	                    "h5",
-	                    { className: "list-group-item-text project-list p-desc" },
-	                    portfolio.description ? portfolio.description : DefaultDescription
-	                ),
-	                _react2.default.createElement(
-	                    "p",
-	                    { className: "list-group-item-text project-list p-tech" },
-	                    "Languages used: ",
-	                    portfolio.technologies ? JSON.parse(portfolio.technologies).map(function (item, index) {
-	                        return _react2.default.createElement(
-	                            "p",
-	                            { className: "list-group-item-text project-list p-tech-li", key: index },
-	                            item.toLowerCase()
-	                        );
-	                    }) : DefaultTechnologies
-	                ),
+	                { className: "p-list greyOut" },
 	                _react2.default.createElement(
 	                    "div",
-	                    { className: "portfolio-icons" },
+	                    { className: "portfolio-icons-l" },
 	                    _react2.default.createElement(
 	                        "a",
-	                        { href: portfolio.github ? portfolio.github : DefaultGitHub, className: "list-group-item active project-list p-git" },
+	                        { href: portfolio.github, className: "p-git" },
 	                        _react2.default.createElement("img", { className: "git", src: "../../images/github.png" })
 	                    )
 	                ),
 	                _react2.default.createElement(
 	                    "div",
-	                    { className: "portfolio-icons" },
+	                    { className: "portfolio-icons-r" },
 	                    _react2.default.createElement(
 	                        "a",
-	                        { href: portfolio.website ? portfolio.website : DefaultWebsite, className: "list-group-item active project-list p-site" },
+	                        { href: portfolio.website, className: "p-site" },
 	                        _react2.default.createElement("img", { className: "git", src: "../../images/link.png" })
 	                    )
 	                ),
-	                _react2.default.createElement("hr", { className: "hrSkill" })
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "p-name" },
+	                    portfolio.name
+	                ),
+	                _react2.default.createElement("hr", { className: "hrSkill" }),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "p-desc" },
+	                    portfolio.description
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "p-tech" },
+	                    "Languages used: "
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "p-tech-list" },
+	                    JSON.parse(portfolio.technologies).map(function (item, index) {
+	                        return _react2.default.createElement(
+	                            "div",
+	                            { className: "p-items", key: index },
+	                            item.toLowerCase()
+	                        );
+	                    })
+	                )
 	            );
 	        }
 	    }]);
@@ -23974,6 +23971,7 @@
 	var getProjects = exports.getProjects = function getProjects() {
 
 	   var request = _axios2.default.get("https://frozen-falls-23864.herokuapp.com/portfolio/all");
+	   //const request = axios.get("http://localhost:3131/portfolio/all");
 	   return {
 	      type: "GETTING_PROJECTS",
 	      payload: request
